@@ -54,7 +54,7 @@ function draw() {
   y2 = y2 + y2Speed;
 
   fill("green")
-  if (keyIsPressed() === true) {
+  if (keyIsPressed === true) {
     fill("green");
   } else {
     fill("yellow");
