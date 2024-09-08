@@ -10,6 +10,9 @@ let x2Speed = 4;  // speed in X direction
 let y2Speed = 8; // speed in Y direction
 let d2 = 100;      // diameter of the ball
 
+let value1 = '#0000FF';
+let value = '#00FF00';
+
 function setup() {
   createCanvas(400, 400);
 }
@@ -31,12 +34,7 @@ function draw() {
   y1 = y1 + y1Speed;
 
   
-  fill("blue")
-  if (mouseIsPressed === true) {
-    fill("blue")
-  } else {
-    fill("magenta");
-  }
+  fill(value1);
   ellipse(x1, y1, d1);
 
   //Green circle:
@@ -53,11 +51,21 @@ function draw() {
   }
   y2 = y2 + y2Speed;
 
-  fill("green")
-  if (keyIsPressed === true) {
-    fill("green");
-  } else {
-    fill("yellow");
-  }
+  fill(value)
   ellipse(x2, y2, d2);
 }
+
+function mouseClicked() { //pressing key turns circle white or green
+  if (value1 === '#0000FF') {
+    value1 = '#FF00FF';
+  } else {
+    value1 = '#0000FF';
+  }
+}
+function keyPressed() { //pressing key turns circle white or green
+    if (value === '#00FF00') {
+      value = '156, 192,203';
+    } else {
+      value = '#00FF00';
+    }
+  }
